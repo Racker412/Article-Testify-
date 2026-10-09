@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mera Article Blog</title>
+<meta name="description" content="Articles aur tehriren.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Inter+Tight:wght@500;700;800&display=swap">
+<style>
+:root{--bg:#f6f7f9;--ink:#18202b;--muted:#5d6877;--line:#dde1e7;--accent:#2457d6;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#10151c;--ink:#e8ecf2;--muted:#9aa5b5;--line:#252d38;--accent:#7ea2ff;--card:#161d27}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.7 "Newsreader",Georgia,serif}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{border-bottom:1px solid var(--line)}
+.bar{max-width:760px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font:800 22px "Inter Tight",system-ui,sans-serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+nav a{font:500 16px "Inter Tight",system-ui,sans-serif;color:var(--muted);text-decoration:none;margin-left:18px}
+nav a:hover{color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+h1,h2,h3{font-family:"Inter Tight",system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em}
+.intro h1{font-size:clamp(34px,7vw,56px);font-weight:800;margin:0 0 14px}
+.intro p{color:var(--muted);font-size:21px;margin:0 0 40px;max-width:34em}
+.list{list-style:none;margin:0;padding:0}
+.list li{border-top:1px solid var(--line)}
+.list a{display:block;padding:26px 0;text-decoration:none;color:inherit}
+.list h2{font-size:26px;font-weight:700;margin:0 0 6px}
+.list a:hover h2{color:var(--accent)}
+.list p{margin:0 0 8px;color:var(--muted)}
+.meta{font:500 15px "Inter Tight",system-ui,sans-serif;color:var(--muted)}
+.back{font:500 16px "Inter Tight",system-ui,sans-serif;text-decoration:none;display:inline-block;margin-bottom:28px}
+article h1{font-size:clamp(32px,6vw,48px);font-weight:800;margin:0 0 12px}
+article .meta{margin-bottom:36px}
+article h2{font-size:28px;margin:2em 0 .5em}
+article p{margin:0 0 1.2em}
+article blockquote{margin:1.6em 0;padding-left:20px;border-left:4px solid var(--accent);font-style:italic;color:var(--muted)}
+article img{max-width:100%;border-radius:6px}
+article pre{background:var(--card);border:1px solid var(--line);padding:14px;overflow-x:auto;font-size:15px;border-radius:6px}
+.about{max-width:34em}
+footer{border-top:1px solid var(--line);color:var(--muted);font:15px "Inter Tight",system-ui,sans-serif;text-align:center;padding:28px 20px}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="logo" href="#/">Mera Blog</a>
+    <nav><a href="#/">Articles</a><a href="#/about">About</a></nav>
+  </div>
+</header>
+<main id="app"></main>
+<footer>© <span id="yr"></span> Mera Blog. GitHub Pages par hosted.</footer>
+
+<script>
+/* ====== YAHAN APNE ARTICLES LIKHEN ======
+   Naya article add karne ke liye array mein ek aur object paste karein.
+   slug: URL mein dikhne wala naam (chhote harf, dash ke sath)
+   body: HTML — <p>, <h2>, <blockquote>, <img>, <pre> sab chalta hai */
+const SITE = {
+  title: "Mera Blog",
+  tagline: "Seedhe, saaf aur kaam ki tehriren.",
+  about: "<p>Main is blog par un cheezon ke baare mein likhta hun jo mujhe seekhne mein mushkil lagi, taake aap ko na lage.</p><p>Rabta karne ke liye GitHub par mujhe dhoondein.</p>"
+};
+
+const ARTICLES = [
+  {
+    slug: "pehla-article",
+    title: "Pehla article: blog ka aghaz",
+    date: "2026-10-09",
+    summary: "Yeh blog kyun shuru kiya aur yahan kya milega.",
+    body: `
+      <p>Yeh aap ka pehla article hai. Is text ko hata kar apni tehrir likhein.</p>
+      <h2>Is blog mein kya hoga</h2>
+      <p>Har article mein aik mawzu hoga, saaf zubaan mein, misaalon ke sath.</p>
+      <blockquote>Likhna sochne ka sab se acha tareeqa hai.</blockquote>
+      <h2>Agla qadam</h2>
+      <p>Naya article add karne ke liye <code>index.html</code> ke andar <code>ARTICLES</code> list mein aik naya item paste karein.</p>`
+  },
+  {
+    slug: "github-pages-kya-hai",
+    title: "GitHub Pages kya hai?",
+    date: "2026-10-08",
+    summary: "Free mein apni website host karne ka asaan tareeqa.",
+    body: `
+      <p>GitHub Pages aap ki repository se seedhi website bana deta hai, bilkul muft.</p>
+      <h2>Steps</h2>
+      <p>Repository mein <code>index.html</code> upload karein, phir Settings mein Pages khol kar branch select karein.</p>
+      <pre>Settings → Pages → Branch: main → Save</pre>
+      <p>Chand minute baad aap ki site <code>username.github.io/repo-naam</code> par live ho jati hai.</p>`
+  }
+];
+
+const app = document.getElementById("app");
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const fmt = d => new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+const mins = html => Math.max(1, Math.round(html.replace(/<[^>]+>/g," ").split(/\s+/).length / 200));
+
+function home(){
+  document.title = SITE.title;
+  app.innerHTML = `
+    <section class="intro"><h1>${SITE.title}</h1><p>${SITE.tagline}</p></section>
+    <ul class="list">${ARTICLES.map(a => `
+      <li><a href="#/${a.slug}">
+        <h2>${a.title}</h2><p>${a.summary}</p>
+        <span class="meta">${fmt(a.date)} · ${mins(a.body)} min parhai</span>
+      </a></li>`).join("")}</ul>`;
+}
+
+function article(a){
+  document.title = a.title + " | " + SITE.title;
+  app.innerHTML = `
+    <a class="back" href="#/">← Tamam articles</a>
+    <article><h1>${a.title}</h1>
+      <div class="meta">${fmt(a.date)} · ${mins(a.body)} min parhai</div>
+      ${a.body}</article>`;
+}
+
+function about(){
+  document.title = "About | " + SITE.title;
+  app.innerHTML = `<a class="back" href="#/">← Tamam articles</a><h1>About</h1><div class="about">${SITE.about}</div>`;
+}
+
+function route(){
+  const p = location.hash.replace(/^#\//,"");
+  if(!p) home();
+  else if(p === "about") about();
+  else {
+    const a = ARTICLES.find(x => x.slug === p);
+    a ? article(a) : home();
+  }
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
