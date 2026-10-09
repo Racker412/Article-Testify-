@@ -1,140 +1,138 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mera Article Blog</title>
-<meta name="description" content="Articles aur tehriren.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Inter+Tight:wght@500;700;800&display=swap">
+<title>Football IQ | Tactics, History and Analysis</title>
+<meta name="description" content="Football IQ: clear, in-depth articles on tactics, roles, analytics and the history of the game.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 <style>
-:root{--bg:#f6f7f9;--ink:#18202b;--muted:#5d6877;--line:#dde1e7;--accent:#2457d6;--card:#fff}
-@media (prefers-color-scheme:dark){:root{--bg:#10151c;--ink:#e8ecf2;--muted:#9aa5b5;--line:#252d38;--accent:#7ea2ff;--card:#161d27}}
+:root{--bg:#f3f6f3;--ink:#0c2a21;--mut:#55685f;--line:#d3ddd6;--card:#fff;--acc:#d9482b;--deep:#0c2a21;--on:#f3f6f3}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1713;--ink:#e6efe9;--mut:#8fa59a;--line:#1e342b;--card:#102219;--acc:#ff7a59;--deep:#102219;--on:#e6efe9}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.7 "Newsreader",Georgia,serif}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-header{border-bottom:1px solid var(--line)}
-.bar{max-width:760px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo{font:800 22px "Inter Tight",system-ui,sans-serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
-nav a{font:500 16px "Inter Tight",system-ui,sans-serif;color:var(--muted);text-decoration:none;margin-left:18px}
-nav a:hover{color:var(--ink)}
-main{max-width:760px;margin:0 auto;padding:48px 20px 80px}
-h1,h2,h3{font-family:"Inter Tight",system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em}
-.intro h1{font-size:clamp(34px,7vw,56px);font-weight:800;margin:0 0 14px}
-.intro p{color:var(--muted);font-size:21px;margin:0 0 40px;max-width:34em}
-.list{list-style:none;margin:0;padding:0}
-.list li{border-top:1px solid var(--line)}
-.list a{display:block;padding:26px 0;text-decoration:none;color:inherit}
-.list h2{font-size:26px;font-weight:700;margin:0 0 6px}
-.list a:hover h2{color:var(--accent)}
-.list p{margin:0 0 8px;color:var(--muted)}
-.meta{font:500 15px "Inter Tight",system-ui,sans-serif;color:var(--muted)}
-.back{font:500 16px "Inter Tight",system-ui,sans-serif;text-decoration:none;display:inline-block;margin-bottom:28px}
-article h1{font-size:clamp(32px,6vw,48px);font-weight:800;margin:0 0 12px}
-article .meta{margin-bottom:36px}
-article h2{font-size:28px;margin:2em 0 .5em}
-article p{margin:0 0 1.2em}
-article blockquote{margin:1.6em 0;padding-left:20px;border-left:4px solid var(--accent);font-style:italic;color:var(--muted)}
-article img{max-width:100%;border-radius:6px}
-article pre{background:var(--card);border:1px solid var(--line);padding:14px;overflow-x:auto;font-size:15px;border-radius:6px}
-.about{max-width:34em}
-footer{border-top:1px solid var(--line);color:var(--muted);font:15px "Inter Tight",system-ui,sans-serif;text-align:center;padding:28px 20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 "Source Serif 4",Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.f{font-family:"Barlow Condensed","Arial Narrow",sans-serif;line-height:1.05;letter-spacing:-.005em}
+header{background:var(--deep);color:var(--on)}
+header .w{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px}
+.logo{font:800 28px "Barlow Condensed",sans-serif;text-decoration:none}
+.logo b{color:var(--acc)}
+nav a{font:600 18px "Barlow Condensed",sans-serif;text-decoration:none;margin-left:20px;opacity:.85}
+nav a:hover{opacity:1}
+.hero{background:var(--deep);color:var(--on);padding:24px 0 56px}
+.hero .w{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(46px,8vw,92px);font-weight:800;margin:0 0 16px}
+.hero p{font-size:20px;opacity:.85;margin:0 0 24px;max-width:28em}
+.btn{display:inline-block;background:var(--acc);color:#fff;font:700 19px "Barlow Condensed",sans-serif;padding:11px 24px;border-radius:4px;text-decoration:none}
+.board{width:100%;height:auto;color:var(--on)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 24px}
+.chips button{font:600 18px "Barlow Condensed",sans-serif;background:none;color:var(--ink);border:1.5px solid var(--line);padding:6px 16px;border-radius:30px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.feat{display:block;text-decoration:none;background:var(--deep);color:var(--on);padding:32px;border-radius:6px;margin-bottom:28px}
+.feat h2{font-size:clamp(32px,5vw,50px);margin:6px 0 10px}
+.feat p{margin:0 0 10px;opacity:.85;max-width:38em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--acc);padding:22px;border-radius:4px}
+.card:hover h3{color:var(--acc)}
+.card h3{font-size:27px;margin:4px 0 8px}
+.card p{margin:0 0 10px;color:var(--mut);font-size:16.5px;line-height:1.55}
+.cat{font:700 17px "Barlow Condensed",sans-serif;color:var(--acc)}
+.meta{font:500 15px "Barlow Condensed",sans-serif;color:var(--mut);letter-spacing:.02em}
+.feat .meta{color:inherit;opacity:.7}
+.art{max-width:700px;margin:0 auto;padding:44px 20px 60px}
+.art h1{font-size:clamp(40px,7vw,62px);font-weight:800;margin:6px 0 12px}
+.art .meta{display:block;margin-bottom:30px}
+.art p{margin:0 0 1.2em}
+.back{font:600 18px "Barlow Condensed",sans-serif;text-decoration:none;color:var(--acc)}
+.more{border-top:1px solid var(--line);margin-top:40px;padding-top:28px}
+.more h2{font-size:30px;margin:0 0 16px}
+.page{max-width:680px;margin:0 auto;padding:44px 20px 60px}
+.page h1{font-size:52px;margin:0 0 16px}
+footer{background:var(--deep);color:var(--on);padding:32px 0;font:16px "Barlow Condensed",sans-serif;opacity:.95}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{margin-left:16px;text-decoration:none;opacity:.8}
+@media(max-width:760px){.hero .w{grid-template-columns:1fr}.hero{padding-bottom:40px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="bar">
-    <a class="logo" href="#/">Mera Blog</a>
-    <nav><a href="#/">Articles</a><a href="#/about">About</a></nav>
-  </div>
-</header>
+<header><div class="w"><a class="logo" href="#/">Football <b>IQ</b></a>
+<nav><a href="#/">Articles</a><a href="#/about">About</a><a href="#/contact">Contact</a></nav></div></header>
 <main id="app"></main>
-<footer>© <span id="yr"></span> Mera Blog. GitHub Pages par hosted.</footer>
+<footer><div class="w"><span>© <span id="yr"></span> Football IQ. All rights reserved.</span>
+<span><a href="#/about">About</a><a href="#/contact">Contact</a><a href="#/privacy">Privacy Policy</a></span></div></footer>
 
 <script>
-/* ====== YAHAN APNE ARTICLES LIKHEN ======
-   Naya article add karne ke liye array mein ek aur object paste karein.
-   slug: URL mein dikhne wala naam (chhote harf, dash ke sath)
-   body: HTML — <p>, <h2>, <blockquote>, <img>, <pre> sab chalta hai */
-const SITE = {
-  title: "Mera Blog",
-  tagline: "Seedhe, saaf aur kaam ki tehriren.",
-  about: "<p>Main is blog par un cheezon ke baare mein likhta hun jo mujhe seekhne mein mushkil lagi, taake aap ko na lage.</p><p>Rabta karne ke liye GitHub par mujhe dhoondein.</p>"
-};
+/* Naya article: ARTICLES mein ek line add karein. Paragraphs ko "|" se alag karein. */
+const A=[
+["total-football","Tactics","Total Football: When Every Player Became Every Position","Ajax and the Netherlands rewrote how teams use space.","Total Football grew at Ajax under Rinus Michels in the late 1960s and early 1970s, and reached the world stage with the Netherlands at the 1974 World Cup. Its idea was simple and radical: no player belongs to one position.|If a defender moved forward, a teammate covered his zone. Johan Cruyff was the symbol on the pitch, drifting wherever space opened. The system demanded fitness, intelligence and trust, and its ideas still shape modern pressing and positional play.","2026-10-09"],
+["tiki-taka","Tactics","Tiki-Taka Explained: Control the Ball, Control the Game","Short passing, patience and why possession is a defensive tool.","Tiki-taka is a style built on short, quick passes and constant movement. It became famous through Barcelona under Pep Guardiola and a Spain side that won Euro 2008, the 2010 World Cup and Euro 2012.|The aim is not passing for its own sake. Keeping the ball means the opponent cannot attack, and patient circulation drags defenders out of shape until a gap appears. It works best with technically excellent players and a team that presses the moment it loses the ball.","2026-10-08"],
+["gegenpressing","Tactics","Gegenpressing: Winning the Ball Back in Five Seconds","Why the best moment to attack is right after you lose it.","Gegenpressing, or counter-pressing, means pressing immediately after losing possession instead of retreating. Jurgen Klopp made the approach famous at Borussia Dortmund and later Liverpool.|The logic is that opponents are most disorganised in the seconds after they win the ball. Their players are out of position and often facing their own goal. A quick regain can create a chance with a short pass, which is why many coaches call it the best playmaker.","2026-10-07"],
+["catenaccio","Tactics","Catenaccio: The Art of the Italian Defence","How a bolt on the door became a football philosophy.","Catenaccio means door-bolt in Italian. It is a defensive system that grew in Italy in the mid-twentieth century and was perfected by Helenio Herrera's Inter in the 1960s.|It usually used a sweeper behind the defensive line, strict man-marking and fast counter-attacks. Critics called it negative, but the system demanded discipline and tactical intelligence. Its legacy lives on in the compact, organised defending Italian teams are still known for.","2026-10-06"],
+["false-nine","Tactics","The False Nine: A Striker Who Isn't Really a Striker","Dropping deep to confuse centre-backs and open space.","A false nine wears the number nine shirt but plays like a midfielder, dropping deep to receive the ball. This leaves the centre-backs with a dilemma: follow him and leave a gap, or stay and let him turn.|The role became widely discussed when Lionel Messi played it for Barcelona under Guardiola. It works because wide forwards and midfielders run into the space the false nine leaves behind, creating chances from unexpected angles.","2026-10-05"],
+["expected-goals","Analytics","Expected Goals (xG): What the Numbers Really Say","A simple guide to football's most popular statistic.","Expected goals, or xG, gives every shot a value between 0 and 1, showing how likely it is to become a goal. Models consider factors like distance, angle, body part and the type of assist.|A team's total xG helps show whether a result was fair. A side that wins 1-0 with 0.3 xG against 2.1 may have been lucky. xG is most useful over many matches, because in a single game finishing luck can easily outweigh chance quality.","2026-10-04"],
+["offside-rule","Basics","The Offside Rule, Explained Simply","The law everyone argues about, in plain language.","A player is in an offside position if any part of the head, body or feet that can score is nearer the opponents' goal line than both the ball and the second-last opponent. Being in that position is not an offence by itself.|A player is only penalised if they become involved in play when the ball is played to them. There is no offside from a goal kick, throw-in or corner, and a player cannot be offside in their own half.","2026-10-03"],
+["four-three-three","Tactics","The 4-3-3: Football's Most Flexible Formation","Width, a midfield triangle and endless variations.","The 4-3-3 uses four defenders, three central midfielders and a front three. It gives natural width through the wingers and a midfield triangle that makes passing options easy to find.|The triangle can point up or down depending on whether a team wants a deep playmaker or two attacking midfielders. In defence it can shift into a 4-5-1, and in attack the full-backs can push on, which is why so many top teams have used it.","2026-10-02"],
+["wing-backs","Tactics","Wing-Backs and the Back Three","Why some of the hardest jobs in football are on the flanks.","A back three, such as a 3-5-2 or 3-4-3, relies on wing-backs to cover the entire side of the pitch. In attack they act like wingers, and in defence they drop to form a back five.|The role demands stamina, pace and good crossing. The system gives a team an extra central defender and a numerical edge in midfield, but if the wing-backs are caught high up the pitch, the spaces on the flanks can be exposed.","2026-10-01"],
+["holding-midfielder","Roles","The Holding Midfielder: The Quiet Heart of the Team","The number six protects the defence and starts the attack.","The holding midfielder, often called the number six, sits just in front of the defence. The job is to break up opposition attacks, cover space and keep possession moving.|Great players in this role rarely get headlines, yet teams struggle without them. They read danger early, position themselves to cut passing lanes and play the simple pass that releases teammates. Their value shows most clearly when they are missing.","2026-09-30"],
+["high-press-low-block","Tactics","High Press vs Low Block: Two Ways to Defend","Attack the ball or protect the space: both can win matches.","A high press tries to win the ball near the opponent's goal. It needs fitness and coordination, because one player out of sync lets the opposition pass through the lines.|A low block does the opposite: the team sits deep, stays compact and denies space behind the defence. It invites pressure but limits good chances. Neither approach is better by default. The right choice depends on the players available and the opponent.","2026-09-29"],
+["counter-attack","Tactics","The Counter-Attack: Speed as a Weapon","Why giving the ball away can be a smart plan.","A counter-attack aims to move the ball forward quickly just after winning it, before the opponent can reorganise. Teams that use it are happy to let the other side have possession.|It needs a good first pass, fast forwards and runners who attack space. When it works, a goal can come in seconds. Many underdogs have beaten stronger teams by defending well, then striking fast on a clear opening.","2026-09-28"],
+["set-pieces","Tactics","Set Pieces: The Hidden Goal Factory","Corners and free kicks decide more games than many fans think.","Set pieces give a team a controlled chance to create something from a stopped ball. A rehearsed corner routine can produce a clear header without a single open-play pass.|Defending them requires a choice. Zonal marking assigns players to areas, while man-marking assigns them to opponents, and many teams combine both. Clubs now employ specialist set-piece coaches, because small improvements here can win several points a season.","2026-09-27"],
+["sweeper-keeper","Roles","The Sweeper-Keeper: Goalkeepers Who Play Like Outfielders","Modern goalkeepers start attacks and defend the space behind.","A sweeper-keeper stands higher up the pitch than a traditional goalkeeper, ready to clear long balls behind the defence. Manuel Neuer helped popularise the idea for a new generation.|The role also includes passing. Keepers now join the build-up, giving the team an extra player against the press. It carries risk, as a poor pass can lead to a goal, but the rewards in control and territory are why most top clubs now demand it.","2026-09-26"],
+["var-explained","Basics","VAR: How Video Review Works","What the referee can check and what is left to judgement.","The Video Assistant Referee, or VAR, was first used at a World Cup in 2018. It supports the referee on four types of decisions: goals, penalty decisions, direct red cards and cases of mistaken identity.|A separate team of officials watches replays and advises the referee, who can then review the footage on a pitchside monitor. The aim is to fix clear and obvious errors. Debate continues about delays and how much interpretation should remain.","2026-09-25"],
+["first-world-cup","History","The First World Cup: Uruguay, 1930","How a small nation hosted and won the first tournament.","The first FIFA World Cup took place in Uruguay in 1930, a country celebrating a hundred years of independence. Thirteen teams entered, and many European sides had to make a long voyage by ship.|Uruguay reached the final and beat neighbours Argentina 4-2 to become the first world champions. The tournament set the template for what became the biggest single-sport event on earth, now watched by billions every four years.","2026-09-24"],
+["youth-academies","Development","Youth Academies: How Clubs Grow Their Own Stars","Why La Masia, Ajax and others became famous for developing talent.","A good academy teaches more than technique. It builds decision-making, game understanding and character, usually from a young age. Clubs such as Barcelona with La Masia and Ajax are famous for their long-term approach.|A shared style of play across all age groups helps players move up smoothly. Academies also save money, as a homegrown player costs far less than a transfer. The best clubs treat academy work as a core part of the club's identity.","2026-09-23"],
+["sports-science","Development","Sports Science: The Invisible Part of Modern Football","GPS vests, recovery and why players run what they run.","Modern clubs track training and matches with GPS devices that record distance, sprints and workload. Staff use the data to manage fatigue and reduce injury risk.|Sports science also covers sleep, nutrition, strength work and recovery. These details rarely appear in highlights, yet they affect how a player performs in the last ten minutes. Players today can keep a high intensity throughout a season in a way that was rare a few decades ago.","2026-09-22"],
+["reading-the-game","Development","What Is Football IQ? Reading the Game","The skill that separates good players from great ones.","Football IQ is the ability to understand what is happening on the pitch and to act before others do. It shows in where a player stands, when they pass and how they react to space.|It can be trained. Players improve by scanning, checking their shoulder before receiving the ball and studying patterns in matches. A player with average pace but excellent understanding often looks faster than a quicker player who is a step late.","2026-09-21"],
+["watch-like-analyst","Basics","How to Watch a Match Like an Analyst","Five things to look for beyond the ball.","Start by watching the team without the ball. Notice how the defence holds its line, which players press and how far apart the lines are. Gaps between them are where goals begin.|Then watch the space, not just the ball. Look for the shape of the team in possession, where full-backs position themselves and who covers when they advance. After a few matches this habit turns an ordinary game into a much richer story.","2026-09-20"]
+].map(([slug,cat,title,sum,body,date])=>({slug,cat,title,sum,date,paras:body.split("|")}));
 
-const ARTICLES = [
-  {
-    slug: "pehla-article",
-    title: "Pehla article: blog ka aghaz",
-    date: "2026-10-09",
-    summary: "Yeh blog kyun shuru kiya aur yahan kya milega.",
-    body: `
-      <p>Yeh aap ka pehla article hai. Is text ko hata kar apni tehrir likhein.</p>
-      <h2>Is blog mein kya hoga</h2>
-      <p>Har article mein aik mawzu hoga, saaf zubaan mein, misaalon ke sath.</p>
-      <blockquote>Likhna sochne ka sab se acha tareeqa hai.</blockquote>
-      <h2>Agla qadam</h2>
-      <p>Naya article add karne ke liye <code>index.html</code> ke andar <code>ARTICLES</code> list mein aik naya item paste karein.</p>`
-  },
-  {
-    slug: "github-pages-kya-hai",
-    title: "GitHub Pages kya hai?",
-    date: "2026-10-08",
-    summary: "Free mein apni website host karne ka asaan tareeqa.",
-    body: `
-      <p>GitHub Pages aap ki repository se seedhi website bana deta hai, bilkul muft.</p>
-      <h2>Steps</h2>
-      <p>Repository mein <code>index.html</code> upload karein, phir Settings mein Pages khol kar branch select karein.</p>
-      <pre>Settings → Pages → Branch: main → Save</pre>
-      <p>Chand minute baad aap ki site <code>username.github.io/repo-naam</code> par live ho jati hai.</p>`
-  }
-];
+const app=document.getElementById("app");
+document.getElementById("yr").textContent=new Date().getFullYear();
+const fmt=d=>new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+const mins=a=>Math.max(1,Math.round(a.paras.join(" ").split(/\s+/).length/200));
+const cats=["All",...new Set(A.map(a=>a.cat))];
+const card=a=>`<a class="card" href="#/${a.slug}"><span class="cat">${a.cat}</span><h3>${a.title}</h3><p>${a.sum}</p><span class="meta">${fmt(a.date)} · ${mins(a)} min read</span></a>`;
 
-const app = document.getElementById("app");
-document.getElementById("yr").textContent = new Date().getFullYear();
+const board=`<svg class="board" viewBox="0 0 400 260" role="img" aria-label="Tactics board showing a 4-3-3 formation">
+<g fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="2"><rect x="10" y="10" width="380" height="240"/><path d="M200 10v240"/><circle cx="200" cy="130" r="30"/><rect x="10" y="70" width="55" height="120"/><rect x="335" y="70" width="55" height="120"/></g>
+<path d="M135 130L195 60L300 90" fill="none" stroke="#ff7a59" stroke-width="3" stroke-dasharray="7 6"/>
+<g fill="currentColor"><circle cx="30" cy="130" r="8"/><circle cx="75" cy="55" r="8"/><circle cx="75" cy="105" r="8"/><circle cx="75" cy="155" r="8"/><circle cx="75" cy="205" r="8"/><circle cx="135" cy="80" r="8"/><circle cx="135" cy="130" r="8"/><circle cx="135" cy="180" r="8"/><circle cx="195" cy="60" r="8"/><circle cx="195" cy="130" r="8"/><circle cx="195" cy="200" r="8"/></g>
+<circle cx="300" cy="90" r="8" fill="#ff7a59"/></svg>`;
 
-const fmt = d => new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
-const mins = html => Math.max(1, Math.round(html.replace(/<[^>]+>/g," ").split(/\s+/).length / 200));
-
-function home(){
-  document.title = SITE.title;
-  app.innerHTML = `
-    <section class="intro"><h1>${SITE.title}</h1><p>${SITE.tagline}</p></section>
-    <ul class="list">${ARTICLES.map(a => `
-      <li><a href="#/${a.slug}">
-        <h2>${a.title}</h2><p>${a.summary}</p>
-        <span class="meta">${fmt(a.date)} · ${mins(a.body)} min parhai</span>
-      </a></li>`).join("")}</ul>`;
+function home(sel="All"){
+  document.title="Football IQ | Tactics, History and Analysis";
+  const list=A.filter(a=>sel==="All"||a.cat===sel);
+  const f=A[0];
+  app.innerHTML=`<section class="hero"><div class="w"><div><h1>Understand the game behind the game.</h1>
+  <p>Clear articles on tactics, player roles, analytics and football history.</p><a class="btn" href="#/${f.slug}">Start reading</a></div>${board}</div></section>
+  <div class="w"><div class="chips" role="group" aria-label="Filter by category">${cats.map(c=>`<button aria-pressed="${c===sel}" data-c="${c}">${c}</button>`).join("")}</div>
+  ${sel==="All"?`<a class="feat" href="#/${f.slug}"><span class="cat">Featured</span><h2>${f.title}</h2><p>${f.sum}</p><span class="meta">${fmt(f.date)} · ${mins(f)} min read</span></a>`:""}
+  <div class="grid" style="margin-bottom:60px">${(sel==="All"?list.slice(1):list).map(card).join("")}</div></div>`;
+  app.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{home(b.dataset.c);window.scrollTo({top:document.querySelector(".chips").offsetTop-80})});
 }
-
 function article(a){
-  document.title = a.title + " | " + SITE.title;
-  app.innerHTML = `
-    <a class="back" href="#/">← Tamam articles</a>
-    <article><h1>${a.title}</h1>
-      <div class="meta">${fmt(a.date)} · ${mins(a.body)} min parhai</div>
-      ${a.body}</article>`;
+  document.title=a.title+" | Football IQ";
+  const rel=A.filter(x=>x.cat===a.cat&&x!==a).concat(A.filter(x=>x.cat!==a.cat)).slice(0,3);
+  app.innerHTML=`<div class="art"><a class="back" href="#/">← All articles</a><span class="cat" style="display:block;margin-top:24px">${a.cat}</span><h1>${a.title}</h1>
+  <span class="meta">${fmt(a.date)} · ${mins(a)} min read</span>${a.paras.map(p=>`<p>${p}</p>`).join("")}
+  <div class="more"><h2>Keep reading</h2><div class="grid">${rel.map(card).join("")}</div></div></div>`;
 }
-
-function about(){
-  document.title = "About | " + SITE.title;
-  app.innerHTML = `<a class="back" href="#/">← Tamam articles</a><h1>About</h1><div class="about">${SITE.about}</div>`;
-}
-
+const pages={
+  about:["About Football IQ","<p>Football IQ is an independent site that explains how football works: tactics, roles, analytics and history, written in plain language.</p><p>Our goal is simple. We want every fan to watch the game with a little more understanding and a lot more enjoyment.</p>"],
+  contact:["Contact","<p>Questions, corrections or ideas for articles? Email us at <a href='mailto:youremail@example.com'>youremail@example.com</a>.</p>"],
+  privacy:["Privacy Policy","<p>Football IQ does not collect personal data directly. If advertising or analytics services are added, they may use cookies to show relevant content and measure traffic. You can control cookies in your browser settings.</p><p>For questions about this policy, use the Contact page.</p>"]
+};
 function route(){
-  const p = location.hash.replace(/^#\//,"");
-  if(!p) home();
-  else if(p === "about") about();
-  else {
-    const a = ARTICLES.find(x => x.slug === p);
-    a ? article(a) : home();
-  }
-  window.scrollTo(0,0);
+  const p=location.hash.replace(/^#\//,"");
+  const a=A.find(x=>x.slug===p);
+  if(a)article(a);
+  else if(pages[p]){document.title=pages[p][0]+" | Football IQ";app.innerHTML=`<div class="page"><a class="back" href="#/">← Home</a><h1>${pages[p][0]}</h1>${pages[p][1]}</div>`}
+  else home();
+  if(!(!p))window.scrollTo(0,0);
 }
-window.addEventListener("hashchange", route);
-route();
+addEventListener("hashchange",route);route();
 </script>
 </body>
 </html>
